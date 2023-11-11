@@ -8,10 +8,10 @@ function displaySavings() {
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     let homePrice = homePriceInput.value.replace(/,/g, '');
-    let percentDown = percentageInput.value / 100;
+    let decimalRate = percentageInput.value / 100;
 
-    if (homePrice && percentDown) {
-      let savings = homePrice * percentDown;
+    if (homePrice && decimalRate) {
+      let savings = homePrice * decimalRate;
       messageContainer.textContent = `Your Down Payment Savings Goal is ${savings}`;
     } else {
       messageContainer.textContent = `Please enter valid inputs for Home Price and Percentage.`;
